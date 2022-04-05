@@ -187,6 +187,8 @@ Apabila button arimatika diklik, maka akan muncul seperti dibawah ini :
 
 ### 2. Penggunaan IF-ELSE
 Cara penggunaan If-Else seperti contoh dibawah ini : <br>
+Dengan konsep apabila nilai yang diinputkan sama dengan atau lebih dari 60, maka akan lulus. <br>
+Sedangkan nilai dibawah 60, maka tidak lulus. <br>
 ```
     <!DOCTYPE html>
     <html lang="en">
@@ -224,3 +226,98 @@ Lalu, dicoba lagi misalkan pada kolom input diisi 55 <br>
 
 Maka, akan muncul hasil seperti dibawah ini : <br>
 ![Gambar 7d](screenshot/ss7d.PNG) <br>
+
+### 3. Penggunaan Switch
+Cara penggunaan switch seperti contoh dibawah ini : <br>
+Dengan konsep user diminta menginputkan nilai 1-5. Nilai yang diinputkan akan muncul sesuai case nya.<br>
+```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SWITCH</title>
+        <script lang="javascript">
+            function test()
+            {
+                val1=window.prompt("input nilai (1-5) : ")
+                switch (val1)
+                {
+                    case "1" :
+                        document.write("bilangan satu")
+                        break
+                    case "2" :
+                        document.write("bilangan dua")
+                        break
+                    case "3" :
+                        document.write("bilangan tiga")
+                        break
+                    case "4" :
+                        document.write("bilangan empat")
+                        break
+                    case "5" :
+                        document.write("bilangan lima")
+                        break
+                    default :
+                        document.write("bilangan lainnya") 
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" name="button1" value="switch" onclick=test()>
+    </body>
+    </html>
+```
+<br>
+
+
+Ini adalah hasil awal dari sintaks diatas : <br>
+![Gambar 8a](screenshot/ss8a.PNG) <br>
+
+Misalkan pada kolom input diisi 4  <br>
+![Gambar 8b](screenshot/ss8b.PNG) <br>
+
+Maka, akan muncul hasil seperti dibawah ini : <br>
+![Gambar 8c](screenshot/ss8c.PNG) <br>
+
+## D. Pembuatan Form
+### 1. Membuat Form Input
+Membuat form input seperti contoh dibawah ini : <br>
+```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FORM INPUT</title>
+        <script lang="javascript">
+            function test() {
+                var val1=document.kirim.T1.value
+                if (val1%2==0)
+                    document.kirim.T2.value="bilangan genap"
+                else
+                    document.kirim.T2.value="blangan ganjil"
+            }
+        </script>
+    </head>
+    <body>
+        <form method="POST" name="kirim">
+            <p>BIL<input type="text" name="T1" size="20"> MERUPAKAN BIL <input type="text" name="T2" size="20"></p>
+            <p><input type="button" value="TEBAK" name="B1" onclick=test()></p>
+        </form>
+    </body>
+    </html>
+```
+<br>
+
+
+Ini adalah hasil awal dari sintaks diatas : <br>
+Misalkan pada kolom input BIL diisi nilai 96  <br>
+![Gambar 9a](screenshot/ss9a.PNG) <br>
+
+Lalu, klik button TEBAK. <br>
+Maka, akan muncul hasil seperti dibawah ini : <br>
+![Gambar 9b](screenshot/ss9b.PNG) <br>
