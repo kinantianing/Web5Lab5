@@ -373,7 +373,7 @@ Apabila button ke 2 dan 4 diklik maka akan berubah seperti dibawah ini.<br>
 ![Gambar 10c](screenshot/ss10c.PNG) <br>
 
 ## E. HTML DOM
-### 3. Membuat Daftar Menu
+### 1. Membuat Daftar Menu
 Membuat daftar menu seperti contoh dibawah ini : <br>
 Memakai sistem pilihan menggunakan checkbox dengan perhitungan otomatis <br>
 ```
