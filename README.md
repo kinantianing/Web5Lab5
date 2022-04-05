@@ -419,3 +419,11 @@ Ini adalah hasil awal dari sintaks diatas : <br>
 
 Apabila checkbox ke 1 dan ke 3 diceklis, maka akan menghitung otomatis total harga seperti dibawah ini. <br>
 ![Gambar 11b](screenshot/ss11b.PNG) <br>
+
+
+## SOAL
+
+### Pertanyaan dan Tugas
+
+### 1. Buat script untuk melakukan validasi pada isian form. <br>
+Jawab : <br>
