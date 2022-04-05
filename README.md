@@ -118,6 +118,109 @@ Masukan nama contoh seperti dibawah ini : <br>
 Lalu klik tombol OK, maka akan menjadi seperti dibawah ini : <br>
 ![Gambar 4c](screenshot/ss4c.PNG) <br>
 
+### 4. Penggunaan Javascript dengan Body Onload
+Cara penggunaan javascript dengan body onload seperti contoh dibawah ini : <br>
+```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PENGGUNAAN ONLOAD</title>
+        <script language="javascript">
+            function pesan(){
+                alert ("memanggil javascript lewat body onload")
+            }
+        </script>
+    </head>
+    <body>
+        <body onload=pesan()>
+    </body>
+    </html>
+```
+<br>
 
 
+Ini adalah hasil dari sintaks diatas : <br>
+![Gambar 5](screenshot/ss5.PNG) <br>
 
+## C. Dasar Pemrograman Pada Javascript
+### 1. Operasi Dasar Aritmatika
+Contoh operasi dasar aritmatika seperti contoh dibawah ini : <br>
+```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Operasi Dasar Aritmatika</title>
+        <script language="javascript">
+            function test (val1, val2) {
+                document.write("<br>"+"Perkalian : val1*val2"+"<br>")
+                document.write(val1*val2)
+                document.write("<br>"+"Pembagian : val1/val2"+"<br>")
+                document.write(val1/val2)
+                document.write("<br>"+"Penjumlahan : val1+val2"+"<br>")
+                document.write(val1+val2)
+                document.write("<br>"+"Pengurangan : val1-val2"+"<br>")
+                document.write(val1-val2)
+                document.write("<br>"+"Modulus : val1%val2"+"<br>")
+                document.write(val1%val2)
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" name="button1" value="arithmetic" onclick=test(12,4)>
+    </body>
+    </html>
+```
+<br>
+
+
+Ini adalah hasil awal dari sintaks diatas :
+![Gambar 6a](screenshot/ss6a.PNG) <br>
+
+Apabila button arimatika diklik, maka akan muncul seperti dibawah ini :
+![Gambar 6b](screenshot/ss6b.PNG) <br>
+
+### 2. Penggunaan IF-ELSE
+Cara penggunaan If-Else seperti contoh dibawah ini : <br>
+```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IF-ELSE</title>
+    </head>
+    <body>
+        <script language="javascript">
+            var nilai = prompt("nilai (0-100) : ", 0);
+            var hasil = "";
+            if (nilai >= 60)
+            hasil = "lulus !";
+            else
+            hasil = "tidak lulus";
+            document.write("hasil : "+hasil);
+        </script>    
+    </body>
+    </html>
+```
+<br>
+
+
+Ini adalah hasil awal dari sintaks diatas : <br>
+Misalkan pada kolom input diisi 75 <br>
+![Gambar 7a](screenshot/ss7a.PNG) <br>
+
+Maka, akan muncul hasil seperti dibawah ini : <br>
+![Gambar 7b](screenshot/ss7b.PNG) <br>
+
+Lalu, dicoba lagi misalkan pada kolom input diisi 55 <br>
+![Gambar 7c](screenshot/ss7c.PNG) <br>
+
+Maka, akan muncul hasil seperti dibawah ini : <br>
+![Gambar 7d](screenshot/ss7d.PNG) <br>
