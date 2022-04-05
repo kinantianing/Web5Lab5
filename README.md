@@ -182,7 +182,7 @@ Contoh operasi dasar aritmatika seperti contoh dibawah ini : <br>
 Ini adalah hasil awal dari sintaks diatas :
 ![Gambar 6a](screenshot/ss6a.PNG) <br>
 
-Apabila button arimatika diklik, maka akan muncul seperti dibawah ini :
+Apabila button arithmatic diklik, maka akan muncul seperti dibawah ini :
 ![Gambar 6b](screenshot/ss6b.PNG) <br>
 
 ### 2. Penggunaan IF-ELSE
@@ -285,6 +285,7 @@ Maka, akan muncul hasil seperti dibawah ini : <br>
 ## D. Pembuatan Form
 ### 1. Membuat Form Input
 Membuat form input seperti contoh dibawah ini : <br>
+Dengan konsep menyatakan suatu bilangan yang akan diinputkan merupakan bilangan ganjil atau genap. <br>
 ```
     <!DOCTYPE html>
     <html lang="en">
@@ -320,4 +321,101 @@ Misalkan pada kolom input BIL diisi nilai 96  <br>
 
 Lalu, klik button TEBAK. <br>
 Maka, akan muncul hasil seperti dibawah ini : <br>
+Yaitu 96 merupakan bilangan genap. <br>
 ![Gambar 9b](screenshot/ss9b.PNG) <br>
+
+### 2. Membuat Form Button
+Membuat form button seperti contoh dibawah ini : <br>
+Button yang diklik nantinya dapat merubah warna background atau warna font. <br>
+```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FORM BUTTON</title>
+    </head>
+    <body>
+        <script lang="javascript">
+            function ubahWarnaLB(warna) {
+                document.bgColor = warna;
+            }
+            function ubahWarnaLD(warna) {
+                document.fgColor = warna;
+            }
+        </script>
+
+        <h1>SUNSHINE</h1>
+        <form>
+            <input type="button" name="Latar Belakang Hijau" onclick="ubahWarnaLB('GREEN')">
+            <input type="button" name="Latar Belakang Oren" onclick="ubahWarnaLB('ORANGE')">
+            <input type="button" name="Teks Kuning" onclick="ubahWarnaLD('YELLOW')">
+            <input type="button" name="Teks Biru" onclick="ubahWarnaLD('BLUE')">
+        </form>
+        <script lang="javascript">
+            document.write("Dimodifikasi terakhir pada " + document.lastModified);
+        </script>
+    </body>
+    </html>
+```
+<br>
+
+
+Ini adalah hasil awal dari sintaks diatas : <br>
+![Gambar 10a](screenshot/ss10a.PNG) <br>
+
+Button ke 1 dan 2 akan merubah warna background, sedangkan buttton ke 3 dan 4 akan merubah warna font. <br>
+Apabila button ke 1 dan 3 diklik maka akan berubah seperti dibawah ini.<br>
+![Gambar 10b](screenshot/ss10b.PNG) <br>
+
+Apabila button ke 2 dan 4 diklik maka akan berubah seperti dibawah ini.<br>
+![Gambar 10c](screenshot/ss10c.PNG) <br>
+
+## E. HTML DOM
+### 3. Membuat Daftar Menu
+Membuat daftar menu seperti contoh dibawah ini : <br>
+Memakai sistem pilihan menggunakan checkbox dengan perhitungan otomatis <br>
+```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DAFTAR MENU</title>
+        <script>
+            function hitung(ele) {
+                var total = document.getElementById('total').value;
+                    total = (total ? parseInt(total) : 0);
+                var harga = 0;
+
+                if (ele.checked) {
+                    harga = ele.value;
+                    total += parseInt(harga);
+                } else {
+                    harga = ele.value;
+                    if (total > 0)
+                        total -= parseInt(harga);
+                }
+                document.getElementById('total').value = total;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Daftar Menu Makanan</h1>
+        <label><input type="checkbox" value="5000" id="menu1" onclick="hitung(this);"/>Ayam Goreng Rp.5000</label></br>
+        <label><input type="checkbox" value="500" id="menu2" onclick="hitung(this);"/>Tempe Goreng Rp.500</label></br>
+        <label><input type="checkbox" value="2500" id="menu2" onclick="hitung(this);"/>Telur Dadar Rp.2500</label></br>
+        <strong>Total Bayar : Rp. <input id="total" type="text"></strong>
+    </body>
+    </html>
+```
+<br>
+
+
+Ini adalah hasil awal dari sintaks diatas : <br>
+![Gambar 11a](screenshot/ss11a.PNG) <br>
+
+Apabila checkbox ke 1 dan ke 3 diceklis, maka akan menghitung otomatis total harga seperti dibawah ini. <br>
+![Gambar 11b](screenshot/ss11b.PNG) <br>
