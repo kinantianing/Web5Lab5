@@ -36,7 +36,7 @@ Ini adalah hasil dari sintaks diatas :
 ![Gambar 1](screenshot/ss1.PNG) <br>
 
 ## B. Javascript Dasar
-### 2. Membuat Alert
+### 1. Membuat Alert
 Membuat alert sebagai property window menggunakan `window.alert()` seperti contoh dibawah ini : <br>
 ```
     <!DOCTYPE html>
@@ -86,3 +86,38 @@ Cara penggunaan method dalam objek menggunakan `document.write()` seperti contoh
 
 Ini adalah hasil dari sintaks diatas :
 ![Gambar 3](screenshot/ss3.PNG) <br>
+
+### 3. Penggunaan Prompt
+Cara penggunaan prompt seperti contoh dibawah ini : <br>
+```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PEMASUKAN DATA</title>
+    </head>
+    <body>
+        <script language="javascript">
+            var nama = prompt("Siapa nama anda ?", "Masukan nama anda");
+            document.write("hai, " + nama);
+        </script>
+    </body>
+    </html>
+```
+<br>
+
+
+Ini adalah hasil awal dari sintaks diatas : <br>
+![Gambar 4a](screenshot/ss4a.PNG) <br>
+
+Masukan nama contoh seperti dibawah ini : <br>
+![Gambar 4b](screenshot/ss4b.PNG) <br>
+
+Lalu klik tombol OK, maka akan menjadi seperti dibawah ini : <br>
+![Gambar 4c](screenshot/ss4c.PNG) <br>
+
+
+
+
