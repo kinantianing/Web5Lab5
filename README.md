@@ -428,7 +428,7 @@ Apabila checkbox ke 1 dan ke 3 diceklis, maka akan menghitung otomatis total har
 ### 1. Buat script untuk melakukan validasi pada isian form. <br>
 Jawab : <br>
 Membuat form dengan validasi isiian form, seperti sintaks dibawah ini : <br>
-Berikut merupakan sintaks html nya buat fila dengan nama `lab5_formValidasi.html`. <br>
+Berikut merupakan sintaks html nya buat file dengan nama `lab5_formValidasi.html`. <br>
 ```
     <!DOCTYPE html>
     <html lang="en">
