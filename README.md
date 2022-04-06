@@ -427,3 +427,137 @@ Apabila checkbox ke 1 dan ke 3 diceklis, maka akan menghitung otomatis total har
 
 ### 1. Buat script untuk melakukan validasi pada isian form. <br>
 Jawab : <br>
+Membuat form dengan validasi isiian form, seperti sintaks dibawah ini : <br>
+Berikut merupakan sintaks html nya buat fila dengan nama `lab5_formValidasi.html`. <br>
+```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Input</title>
+        <link rel="stylesheet" href="style_formvalidasi.css">
+    </head>
+    <body>
+        <section id="hero">
+            <h1>Form Validasi</h1>
+                <form action="proses.php" method="POST" onSubmit="validasi()" name="formValidasi">
+                    <fieldset>
+                        <legend>Data Mahasiswa</legend>
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" id="nama"  placeholder="Masukan Nama" maxlength="50" minlength="2">
+                        </div>
+                        <div class="form-group">
+                            <label for="nim">Nim</label>
+                            <input type="number" id="nim"  placeholder="Masukan Nim (9 karakter)" minlength="9" maxlength="9">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email"  placeholder="Masukan E-mail">
+                        </div>
+                        <div class="form-group">
+                            <label>Jurusan</label>
+                            <select name="jurusan" id="jurusan">
+                                <option value="0">Pilih Jurusan</option>
+                                <option value="1">Jurusan Informatika</option>
+                                <option value="2">Jurusan Teknik Komputer Jaringan</option>
+                                <option value="3">Jurusan Multimedia</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-danger">Kirim Pesan</button>
+                    </fieldset>
+                </form>
+        </section>
+        <script>
+        function validasi() {
+                var nama = document.getElementById("nama").value;
+                var nim = document.getElementById("nim").value;
+                var email = document.getElementById("email").value;
+                var jurusan = document.getElementById("jurusan").value;
+                if (nama != "" && nim!="" && email!="" && jurusan !="") {
+                    return true;
+                }else{
+                    alert('DATA TIDAK BOLEH KOSONG!');
+                }
+        }
+        </script>
+    </body>
+    </html>
+```
+<br>
+
+Selanjutnya untuk merapihkan tampilan buat file css dengan nama `style_formvalidasi.css`. <br>
+Buatlah seperti sintaks dibawah ini : <br>
+```
+/* HERO PANEL */
+#hero {
+    background-color: #e4e4e5;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+#hero h1 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+legend {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/* INPUT */
+input {
+    width: 99%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-group {
+    margin-top: 25px;
+    margin-left: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+label {
+    margin-left: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input {
+    width: 97%;
+    padding: 10px 15px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+select {
+    width: 97%;
+    padding: 10px 15px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button[type=submit] {
+    margin-left: 25px;
+    padding: 10px 10px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    background-color: #0ca878;
+    border: 1px solid #197a43;
+    color: #fff;  
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+```
+<br>
+
+Ini adalah hasil awal dari sintaks diatas : <br>
+![Gambar 12a](screenshot/ss12a.PNG) <br>
+
+Apabila kita coba salah satu data tidak diisi, maka akan muncul alert seperti dibawah ini. <br>
+![Gambar 12b](screenshot/ss12b.PNG) <br>
